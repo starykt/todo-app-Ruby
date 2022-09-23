@@ -1,0 +1,15 @@
+<div class="card-header d-flex align-items-end flex-column">
+  <span>
+    Todo lists
+  </span>
+    <%= link_to "Nova todo list", new_todo_list_path, class:'btn btn-primary btn-sm' %>
+</div>
+
+<ul class='list-group'>
+  <% @todo_lists.each do |todo_list| %>
+    <li class='list-group-item'>
+      <%= link_to todo_list.title, todo_list %>
+    </li>
+  <% end %>
+</ul>
+
